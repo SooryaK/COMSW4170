@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'podcast_searcher.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'podcast_searcher.css') }}"></script>
+        <script>
+            var podcast_titles = {{podcast_titles|tojson}}
+            var podcasts = {{podcasts|tojson}}
+            var podcast_details = {{podcast_details|tojson}}
+            var create_page = {{create_page|tojson}}
+        </script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class = "row ">
+                <div class="col-md-12" id="header">
+                    <h1>Podcast Finder</h1>
+                </div>
+                <nav class="navbar navbar-inverse col-md-12">
+                    <a class="navbar-brand" href="#">Navigation</a>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="{{ url_for('search')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{ url_for('new_podcast')}}">Create</a>
+                        </li>
+                        <li class="nav-item nav_inline">
+                            <input class="form-control nav_inline" type="search" placeholder="Podcasts" id="podcast_title_textbox">
+                        </li>
+                        <li class="nav-item nav_inline">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnSubmit">Search</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+
+        </div>
+
+        <div class = "container" id="mainbody">
+            {% block content %}
+            
+            {% endblock %}
+        </div>
+    </body>
+
+</html>

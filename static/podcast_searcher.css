@@ -1,0 +1,78 @@
+.bold{
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+.blackborder{
+    border: 1px solid black;
+}
+#header{
+    padding-left: 10%;
+    background-color: lightgrey;
+    /* height: 200%; */
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* #podcast_title_textbox{
+    width: 100%;
+} */
+.new_podcast_textbox{
+    /* flex: 1 */
+    width: 100%;
+}
+.toprowpadding{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.createrowpadding{
+    padding-bottom:20px;
+}
+.warning{
+    color: red;
+}
+.podcastlisthover{
+    background-color: lightyellow;
+}
+.btnDelete{
+    background-color: red;
+}
+.nav_inline{
+    /* display: inline; */
+    padding-top:5px;
+    /* padding-bottom:5px; */
+    /* /* margin-right:0%; */
+    /* float:left; */
+    /* vertical-align: middle; */
+}
+
+.podcastcardimage{
+    object-fit: contain;
+    /* width: 200px;
+    height: 200px; */
+}
+
+#mission{
+    float: left;
+}
+#results{
+    float: right;
+}
+
+.btnedit{
+    display: inline;
+}
+
+img {
+    width: 100%;
+}
+
+.card-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: larger;
+}
